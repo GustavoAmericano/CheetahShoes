@@ -5,5 +5,6 @@ namespace CheetahShoes.Data
 {
     public class ShoeRepository : IShoeRepository
     {
+
     }
 }
