@@ -13,7 +13,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CheetahShoes.Core.Entities\CheetahShoes.Core.Entities.csproj" />
+<<<<<<< HEAD
     <ProjectReference Include="..\CheetahShoes.RestAPI\CheetahShoes.RestAPI.csproj" />
+=======
+    <ProjectReference Include="..\CheetahShoes.Core\CheetahShoes.Core.csproj" />
+>>>>>>> master
   </ItemGroup>
 
 </Project>
