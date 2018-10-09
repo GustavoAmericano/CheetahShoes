@@ -3,23 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahShoes.Core", "CheetahShoes.Core\CheetahShoes.Core.csproj", "{FA2DF428-E794-47D0-9E65-5020C83C0810}"
-=======
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheetahShoes.Core", "CheetahShoes.Core\CheetahShoes.Core.csproj", "{FA2DF428-E794-47D0-9E65-5020C83C0810}"
->>>>>>> master
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E91D7840-422C-4BC9-836B-B4C0288E2E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahShoes.Core.Entities", "CheetahShoes.Core.Entities\CheetahShoes.Core.Entities.csproj", "{B9B62B8A-2CB6-499D-A5DD-3CE3D51A38AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheetahShoes.Core.Entities", "CheetahShoes.Core.Entities\CheetahShoes.Core.Entities.csproj", "{B9B62B8A-2CB6-499D-A5DD-3CE3D51A38AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{214C2470-C56E-4227-8291-A9E683A425E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahShoes.Data", "CheetahShoes.Data\CheetahShoes.Data.csproj", "{4E2CE9C0-71C9-4201-8780-BCCCE78FE3A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheetahShoes.Data", "CheetahShoes.Data\CheetahShoes.Data.csproj", "{4E2CE9C0-71C9-4201-8780-BCCCE78FE3A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{69B0CFDD-A96A-458C-8AFA-2E559F32C72E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahShoes.RestAPI", "CheetahShoes.RestAPI\CheetahShoes.RestAPI.csproj", "{C75C81B5-691E-43A0-A487-89745DC98103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheetahShoes.RestAPI", "CheetahShoes.RestAPI\CheetahShoes.RestAPI.csproj", "{C75C81B5-691E-43A0-A487-89745DC98103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
