@@ -63,10 +63,10 @@ namespace CheetahShoes.RestAPI
             services.AddScoped<IShoeService, ShoeService>();
 
             // Ensures that we don't loop data. E.g. "Shoe has a size, which has a shoe, which has a size, which has a shoe..." (CURRENTLY NOT RELEVANT)
-            //services.AddMvc().AddJsonOptions(options =>
-            //{
-            //    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            //});
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

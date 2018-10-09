@@ -28,21 +28,39 @@ namespace CheetahShoes.RestAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Shoe> Get(int id)
         {
-            return "value";
+            return _shoesService.ReadById(id);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Shoe> Post([FromBody] Shoe shoe)
         {
+            try
+            {
+                return _shoesService.Create(shoe);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<Shoe> Put(int id, [FromBody] Shoe shoeUpdate)
         {
+            if(id != shoeUpdate.Id) return BadRequest("Invalid ID!");
+
+            try
+            {
+                return _shoesService.Update(shoeUpdate);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // DELETE api/values/5

@@ -12,7 +12,8 @@ namespace CheetahShoes.Core.Entities
         public double Price { get; set; }
         public string Picture { get; set; }
         public string Gender { get; set; }
-        public List<Size> Sizes { get; set; }
+        public List<ShoeSize> Sizes { get; set; }
+
 
         
 

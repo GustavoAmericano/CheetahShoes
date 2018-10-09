@@ -11,42 +11,52 @@ namespace CheetahShoes.Data
             ctx.Database.EnsureDeleted();
             ctx.Database.EnsureCreated();
 
-            //var size1 = ctx.Sizes.Add(new Size()
-            //{
-            //    Id = 1,
-            //    SizeNumber = 44,
-            //    Quantity = 12
-            //}).Entity;
-            //var size2 = ctx.Sizes.Add(new Size()
-            //{
-            //    Id = 2,
-            //    SizeNumber = 45,
-            //    Quantity = 8
-            //}).Entity;
-            var size1 = new Size()
+            var size1 = ctx.Sizes.Add(new Size()
             {
                 Id = 1,
                 SizeNumber = 44,
-                Quantity = 12
-            };
-            var size2 = new Size()
+            }).Entity;
+            var size2 = ctx.Sizes.Add(new Size()
             {
                 Id = 2,
-                SizeNumber = 44,
-                Quantity = 12
-            };
+                SizeNumber = 45,
+            }).Entity;
+
+            var size3 = ctx.Sizes.Add(new Size()
+            {
+                Id = 3,
+                SizeNumber = 1337,
+            }).Entity;
 
             var shoe1 = ctx.Shoes.Add(new Shoe
             {
                 Id = 1,
-                //Brand = "Nike",
+                Brand = "Nike",
                 Model = "Airmax",
                 Description = "Flot",
                 Gender = "Male",
                 Picture = "url",
                 Price = 500,
-                Sizes = new List<Size>() {size1,size2}
             }).Entity;
+
+            var shoeSize1 = ctx.ShoeSizes.Add(new ShoeSize()
+            {
+                Size = size1,
+                SizeId = size1.Id,
+
+                Shoe = shoe1,
+                ShoeId = shoe1.Id,
+                Stock = 5,
+            });
+            var shoeSize2 = ctx.ShoeSizes.Add(new ShoeSize()
+            {
+                Size = size2,
+                SizeId = size2.Id,
+
+                Shoe = shoe1,
+                ShoeId = shoe1.Id,
+                Stock = 129382181
+            });
 
             ctx.SaveChanges();
         }
