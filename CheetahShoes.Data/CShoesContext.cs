@@ -9,8 +9,11 @@ namespace CheetahShoes.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Shoe>()
-            //    .hasStuff
+            modelBuilder.Entity<Shoe>()
+                .HasMany<Size>(sh => sh.Sizes);
         }
+
+        public DbSet<Shoe> Shoes { get; set; }
+        public DbSet<Size> Sizes { get; set; }
     }
 }

@@ -63,10 +63,10 @@ namespace CheetahShoes.RestAPI
             services.AddScoped<IShoeService, ShoeService>();
 
             // Ensures that we don't loop data. E.g. "Shoe has a size, which has a shoe, which has a size, which has a shoe..." (CURRENTLY NOT RELEVANT)
-            services.AddMvc().AddJsonOptions(options =>
-            {
-                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            });
+            //services.AddMvc().AddJsonOptions(options =>
+            //{
+            //    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            //});
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -80,7 +80,7 @@ namespace CheetahShoes.RestAPI
                 using (var scope = app.ApplicationServices.CreateScope()) // When done, dispose. Get accesspoint to stuff in the services
                 {
                     var ctx = scope.ServiceProvider.GetService<CShoesContext>(); 
-                    //DBSeed.SeedDB(ctx);
+                    DBSeed.SeedDB(ctx);
                 }
             }
             // Else, get Context and ensure that the database actually exists, or create it.

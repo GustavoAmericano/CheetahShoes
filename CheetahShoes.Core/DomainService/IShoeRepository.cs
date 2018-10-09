@@ -10,7 +10,7 @@ namespace CheetahShoes.Core.DomainService
         Shoe Create(Shoe shoe);
         Shoe ReadById(int id);
         Shoe Update(Shoe shoeUpdate);
-        Shoe Delete(int id);
+        void Delete(int id);
 
     }
 }

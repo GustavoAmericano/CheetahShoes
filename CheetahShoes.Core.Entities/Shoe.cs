@@ -5,14 +5,14 @@ namespace CheetahShoes.Core.Entities
 {
     public class Shoe
     {
-        private int Id { get; set; }
-        private String Brand { get; set; }
-        private string Model { get; set; }
-        private string Description { get; set; }
-        private double Price { get; set; }
-        private string Picture { get; set; }
-        private string Gender { get; set; }
-        private List<Size> Sizes { get; set; }
+        public int Id { get; set; }
+        public String Brand { get; set; }
+        public string Model { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public string Picture { get; set; }
+        public string Gender { get; set; }
+        public List<Size> Sizes { get; set; }
 
         
 

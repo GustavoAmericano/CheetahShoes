@@ -2,8 +2,9 @@
 {
     public class Size
     {
-        private int Id { get; set; }
-        private double Sizes { get; set; }
-        private int Quantity { get; set; }
+        public int Id { get; set; }
+        public int ShoeId { get; set; }
+        public double SizeNumber { get; set; }
+        public int Quantity { get; set; }
     }
 }

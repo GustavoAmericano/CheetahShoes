@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{69B0CFDD-A96A-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheetahShoes.RestAPI", "CheetahShoes.RestAPI\CheetahShoes.RestAPI.csproj", "{C75C81B5-691E-43A0-A487-89745DC98103}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoeServiceTest", "ShoeServiceTest\ShoeServiceTest.csproj", "{D8F12F8E-3F06-4713-95CE-92AE300F8CB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C75C81B5-691E-43A0-A487-89745DC98103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C75C81B5-691E-43A0-A487-89745DC98103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C75C81B5-691E-43A0-A487-89745DC98103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F12F8E-3F06-4713-95CE-92AE300F8CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F12F8E-3F06-4713-95CE-92AE300F8CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F12F8E-3F06-4713-95CE-92AE300F8CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F12F8E-3F06-4713-95CE-92AE300F8CB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

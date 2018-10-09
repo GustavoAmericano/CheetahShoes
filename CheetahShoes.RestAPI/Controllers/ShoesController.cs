@@ -2,19 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CheetahShoes.Core.ApplicationService;
+using CheetahShoes.Core.DomainService;
+using CheetahShoes.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CheetahShoes.RestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ShoesController : ControllerBase
     {
+        private readonly IShoeService _shoesService;
+
+        public ShoesController(IShoeService shoeService)
+        {
+            _shoesService = shoeService;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<List<Shoe>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _shoesService.getAllShoes();
         }
 
         // GET api/values/5
@@ -40,6 +49,7 @@ namespace CheetahShoes.RestAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _shoesService.Delete(id);
         }
     }
 }
