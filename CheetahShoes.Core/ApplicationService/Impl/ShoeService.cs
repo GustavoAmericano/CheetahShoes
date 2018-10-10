@@ -37,9 +37,9 @@ namespace CheetahShoes.Core
             _shoeRepo.Delete(id);
         }
 
-        public List<Shoe> getAllShoes()
+        public List<Shoe> getAllShoes(Filter filter)
         {
-            return _shoeRepo.ReadAllShoes().ToList();
+            return _shoeRepo.ReadAllShoes(filter).ToList();
         }
 
         public Shoe ReadById(int id)

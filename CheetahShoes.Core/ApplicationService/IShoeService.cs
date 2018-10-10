@@ -5,7 +5,7 @@ namespace CheetahShoes.Core.ApplicationService
 {
     public interface IShoeService
     {
-        List<Shoe> getAllShoes();
+        List<Shoe> getAllShoes(Filter filter);
         Shoe Create(Shoe shoe);
         Shoe ReadById(int id);
         Shoe Update(Shoe shoeUpdate);

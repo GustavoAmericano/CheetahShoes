@@ -19,11 +19,11 @@ namespace CheetahShoes.RestAPI.Controllers
         {
             _shoesService = shoeService;
         }
-        // GET api/values
+        // GET api/values GET ALL WITH FILTER :-)
         [HttpGet]
-        public ActionResult<List<Shoe>> Get()
+        public ActionResult<List<Shoe>> Get([FromQuery] Filter filter)
         {
-            return _shoesService.getAllShoes();
+            return _shoesService.getAllShoes(filter);
         }
 
         // GET api/values/5

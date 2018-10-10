@@ -34,11 +34,18 @@ namespace CheetahShoes.Data
             _ctx.SaveChanges();
         }
 
-        public IEnumerable<Shoe> ReadAllShoes()
+        public IEnumerable<Shoe> ReadAllShoes(Filter filter)
         {
-            return _ctx.Shoes
-                .Include(x => x.Sizes)
-                .ThenInclude(x => x.Size);
+            if(filter == null)
+                return _ctx.Shoes
+                        .Include(x => x.Sizes)
+                        .ThenInclude(x => x.Size);
+            else
+            {
+                return _ctx.Shoes
+                        .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
+                        .Take(filter.ItemsPerPage);
+            }
         }
 
         public Shoe ReadById(int id)

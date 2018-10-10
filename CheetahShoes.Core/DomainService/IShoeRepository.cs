@@ -6,7 +6,7 @@ namespace CheetahShoes.Core.DomainService
 {
     public interface IShoeRepository
     {
-        IEnumerable<Shoe> ReadAllShoes();
+        IEnumerable<Shoe> ReadAllShoes(Filter filter);
         Shoe Create(Shoe shoe);
         Shoe ReadById(int id);
         Shoe Update(Shoe shoeUpdate);
