@@ -42,9 +42,27 @@ namespace CheetahShoes.Data
                         .ThenInclude(x => x.Size);
             else
             {
-                return _ctx.Shoes
+                if (filter.Terms.ToUpper() == "MALE")
+                {
+                    return _ctx.Shoes
+                        .Where(x => x.Gender == "Male")
                         .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
                         .Take(filter.ItemsPerPage);
+                }
+                else if (filter.Terms.ToUpper() == "FEMALE")
+                {
+                    return _ctx.Shoes
+                        .Where(x => x.Gender == "Female")
+                        .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
+                        .Take(filter.ItemsPerPage);
+                }
+                else
+                {
+                    return _ctx.Shoes
+                        .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
+                        .Take(filter.ItemsPerPage);
+                }
+                
             }
         }
 
