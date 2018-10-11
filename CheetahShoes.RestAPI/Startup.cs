@@ -96,7 +96,7 @@ namespace CheetahShoes.RestAPI
 
             // Setup CORS to only allow requests from featured URL's. Allow any method/header, cause lazy
             app.UseCors(builder =>
-                builder.WithOrigins("gabemedia.dk")
+                builder.WithOrigins("https://gabemedia.dk")
                     .AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
                     .AllowAnyMethod().AllowAnyHeader()
                     .WithOrigins("http://localhost:63342")
