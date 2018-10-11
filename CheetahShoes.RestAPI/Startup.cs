@@ -68,6 +68,13 @@ namespace CheetahShoes.RestAPI
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.AllowAnyOrigin().AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -95,13 +102,7 @@ namespace CheetahShoes.RestAPI
             }
 
             // Setup CORS to only allow requests from featured URL's. Allow any method/header, cause lazy
-            app.UseCors(builder =>
-                builder
-                    .AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
-                    .WithOrigins("https://gabemedia.dk")
-                    .AllowAnyMethod().AllowAnyHeader()
-                    .WithOrigins("http://localhost:63342")
-                    .AllowAnyMethod().AllowAnyHeader());
+            app.UseCors("AllowSpecificOrigin");
             app.UseMvc();
         }
     }
